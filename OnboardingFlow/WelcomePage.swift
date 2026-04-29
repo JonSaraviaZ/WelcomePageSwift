@@ -9,8 +9,30 @@ import SwiftUI
 
 struct WelcomePage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            RoundedRectangle(cornerRadius: 30)
+                .frame(width: 150, height: 150)
+                .foregroundStyle(.tint.secondary)
+            
+            Text("Welcome to My App")
+                //.font(Font.title)
+                .font(.title) //Se puede simplificar el código de Font.title a .title
+            //test
+                .fontWeight(.semibold)
+                .fontDesign(.serif)
+                .border(Color.blue, width: 2)
+            
+            Text("Description text")
+                .font(.title2)
+                .border(Color.blue, width: 2)
+        }
+        
+        .border(.orange, width: 1.5)
+        .padding()
+        .border(.purple, width: 1.5)
+        
     }
+    
 }
 
 #Preview {
